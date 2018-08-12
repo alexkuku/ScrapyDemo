@@ -8,4 +8,6 @@
 
 class ScrapydemoPipeline(object):
     def process_item(self, item, spider):
+        print('================')
+        print(item)
         return item
