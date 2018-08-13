@@ -64,9 +64,9 @@ DOWNLOAD_DELAY = 0.5
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = {
-#    'ScrapyDemo.pipelines.ScrapydemoPipeline': 300,
-# }
+ITEM_PIPELINES = {
+   'ScrapyDemo.pipelines.ScrapydemoPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -88,3 +88,8 @@ DOWNLOAD_DELAY = 0.5
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+mongo_host = 'localhost'
+mongo_port = 27017
+mongo_db_name = 'douban'
+mongo_db_collection = 'douban_movie'

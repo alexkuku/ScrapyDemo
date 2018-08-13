@@ -21,7 +21,7 @@ class DoupanSpiderSpider(scrapy.Spider):
                 douban_item['introduce']=content_s
             douban_item['star'] = i_item.xpath(".//span[@class='rating_num']//text()").extract()[0]
             douban_item['evaluate'] = i_item.xpath(".//div[@class='star']//span[4]//text()").extract()[0]
-            douban_item['describe'] = i_item.xpath(".//p[@class='quote']//span//text()").extract()[0]
+            douban_item['describe'] = i_item.xpath(".//p[@class='quote']//span//text()").extract_first()
             #讲数据yield到pipeline
             yield douban_item
 
